@@ -1,0 +1,102 @@
+baseURL: "https://dracularking.github.io/blogs/"
+locale: "zh-cn"
+title: "My Blog"
+theme: "PaperMod"
+copyright: "© {year} My Blog"
+
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+
+minify:
+  disableXML: true
+  minifyOutput: true
+
+caches:
+  images:
+    dir: :cacheDir/images
+
+pagination:
+  pagerSize: 10
+
+permalinks:
+  posts: "/posts/:slug/"
+
+taxonomies:
+  category: categories
+  tag: tags
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+
+menu:
+  main:
+    - identifier: archives
+      name: 归档
+      url: /archives/
+      weight: 10
+    - identifier: search
+      name: 搜索
+      url: /search/
+      weight: 20
+    - identifier: tags
+      name: 标签
+      url: /tags/
+      weight: 30
+
+params:
+  env: production
+  description: "A personal blog powered by Hugo, PaperMod, GitHub Pages, Cloudflare, and Giscus."
+  author: "My Blog"
+  defaultTheme: auto
+  ShowReadingTime: true
+  ShowShareButtons: true
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: true
+  ShowRssButtonInSectionTermList: true
+  ShowToc: true
+  TocOpen: false
+  comments: true
+  DateFormat: "2006-01-02"
+
+  homeInfoParams:
+    Title: "你好，这里是 My Blog"
+    Content: "记录技术、产品、生活和长期思考。"
+
+  socialIcons:
+    - name: github
+      url: "https://github.com/YOUR_GITHUB_USERNAME"
+    - name: rss
+      url: "/index.xml"
+
+  assets:
+    disableHLJS: true
+
+  giscus:
+    repo: ""
+    repoID: ""
+    category: "Announcements"
+    categoryID: ""
+    mapping: "pathname"
+    strict: "0"
+    reactionsEnabled: "1"
+    emitMetadata: "0"
+    inputPosition: "bottom"
+    lang: "zh-CN"
+    loading: "lazy"
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+  highlight:
+    noClasses: false
+    codeFences: true
+    guessSyntax: true
+    lineNos: false
+    style: github
