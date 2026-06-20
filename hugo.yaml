@@ -78,10 +78,10 @@ params:
     disableHLJS: true
 
   giscus:
-    repo: ""
-    repoID: ""
+    repo: "dracularking/blogs"
+    repoID: "R_kgDOS8a0qg"
     category: "Announcements"
-    categoryID: ""
+    categoryID: "DIC_kwDOS8a0qs4C_h72"
     mapping: "pathname"
     strict: "0"
     reactionsEnabled: "1"
